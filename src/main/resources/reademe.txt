@@ -1,0 +1,8 @@
+自定义starter:
+    1、建立一个maven项目,添加依赖spring-boot-autoconfigure 和 spring-boot-configuration-processor
+    2、建立Properties类,用 @ConfigurationProperties
+    3、建立自动配置类AutoConfiguration,
+        用@Configuration ,@EnableConfigurationProperties , @ConditionalOnClass等修饰
+    4、在resouces目录下建立META-INF/spring.factories(
+    因为在springboot中会有一个AutoConfigurationImportSelector类
+    会获取到所有spring.factories中com.springframework.boot.autoconfigure.EnableAutoConfiguration对应的类)
